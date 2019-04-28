@@ -1,7 +1,7 @@
 # HomeWork-3
 
 ## 數據處理
-首先，由網站上所下載下來的數據如下圖。
+首先，由網站上所下載下來的數據如下圖。(file: stockmarket.csv)
 
 ![](https://imgur.com/P6M6d5A.png)
 

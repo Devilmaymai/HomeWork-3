@@ -90,5 +90,43 @@ Ridge regression結果則如下：
 
 ![](https://imgur.com/jgguBMf.png)
 
+### Discussion — regression
+
 綜合前述的結果，可以看出在經過Feature selection後的Linear regression及Ridge regression的MSE，都比沒有經過Feature selection的MSE差一些。
+而這其實由Scatter plot就可以看出端倪了。
+
+此外，由Time-Diff的Scatter plot中可以看出漲跌幅與時間似乎有小循環。
+![](https://imgur.com/uoQbWTB.png)
+
+因此，將時間轉換成Year、Month、date及Q(季)之後再進行進行一次前面的程式運算。(file: HW3_Linear_Regression_Trail2)
+
+轉換程式碼：
+![](https://imgur.com/VXnX8zA.png)
+
+#### Linear regression
+
+training的結果較前面的好，但是套用到testing set時結果就比前面的結果差。
+![](https://imgur.com/a2Xcyx0.png)
+
+#### Ridge regression
+
+test結果還是較差
+![](https://imgur.com/bn8Ert7.png)
+
+#### Feature selection ("Open Price", "High Price", "Low Price", "Q")
+
+test結果也是較差
+![](https://imgur.com/f8yh94I.png)
+
+#### Feature selection + ridge regression
+
+test結果也還是較差
+![](https://imgur.com/hY4WcH7.png)
+
+#### Summary
+
+到這邊，已經嘗試了我覺得可能可以改進的方法。但結果並不如預期，不過這些其實由scatter plot就可以看出端倪。
+除非有更關鍵的資料或是額外的公式引入，不然應該是無法改進這個結果了。
+
+## SVM
 

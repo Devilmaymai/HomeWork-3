@@ -150,3 +150,5 @@ test結果也還是較差
 ![](https://imgur.com/f9SeKQS.png)
 
 由於兩者的程式碼僅差在kernal = linear或kernal = sigmoid，因此僅附上一個檔案。
+
+### Discussion - SVM

@@ -50,7 +50,7 @@ Time:時間，以timestamp表示
 
 ## Regression
 
-### Linear regression
+### #Linear regression
 
 將前面處理好的資料使用linear regression做training所得的結果如下。
 
@@ -64,7 +64,7 @@ Testing的結果如下。
 
 ![](https://imgur.com/xymrpWz.png)
 
-### Ridge regression
+### #Ridge regression
 
 由下圖可知，最佳 𝛼=0。
 
@@ -78,7 +78,7 @@ Testing的結果如下。
 
 ![](https://imgur.com/uSpEDAJ.png)
 
-### Feature selection + Ridge regression
+### #Feature selection + Ridge regression
 
 由前面的推測，選定Open price、High price及Low Price來進行Linear regression及Ridge regression。
 
@@ -90,7 +90,7 @@ Ridge regression結果則如下：
 
 ![](https://imgur.com/jgguBMf.png)
 
-### Discussion — regression
+### #Discussion — regression
 
 綜合前述的結果，可以看出在經過Feature selection後的Linear regression及Ridge regression的MSE，都比沒有經過Feature selection的MSE差一些。
 而這其實由Scatter plot就可以看出端倪了。
@@ -103,27 +103,27 @@ Ridge regression結果則如下：
 轉換程式碼：
 ![](https://imgur.com/VXnX8zA.png)
 
-#### Linear regression
+#### -Linear regression
 
 training的結果較前面的好，但是套用到testing set時結果就比前面的結果差。
 ![](https://imgur.com/a2Xcyx0.png)
 
-#### Ridge regression
+#### -Ridge regression
 
 test結果還是較差
 ![](https://imgur.com/bn8Ert7.png)
 
-#### Feature selection ("Open Price", "High Price", "Low Price", "Q")
+#### -Feature selection ("Open Price", "High Price", "Low Price", "Q")
 
 test結果也是較差
 ![](https://imgur.com/f8yh94I.png)
 
-#### Feature selection + ridge regression
+#### -Feature selection + ridge regression
 
 test結果也還是較差
 ![](https://imgur.com/hY4WcH7.png)
 
-#### Summary
+#### -Summary
 
 到這邊，已經嘗試了我覺得可能可以改進的方法。但結果並不如預期，不過這些其實由scatter plot就可以看出端倪。
 除非有更關鍵的資料或是額外的公式引入，不然應該是無法改進這個結果了。
@@ -139,16 +139,16 @@ test結果也還是較差
 2."High Price"(當日最高)、"Low Price"(當日最低)及"Volume"(成交量)，基本上為當日收盤結算時才能確定的資料，因此拿來預測漲跌(Diff)不太合理。
 所以這裡僅選擇開盤就能得知的"Open Price"來當作training用的第二種data。
 
-### SVM - linear
+### #SVM - linear
 
 使用linear的kernal，並且令Penalty = 0.05。所做出來的結果如下圖。可以看到預測的準確度僅有50.4%，基本上跟擲硬幣沒兩樣。
 ![](https://imgur.com/4kkNrqQ.png)
 
-### SVM - sigmoid
+### #SVM - sigmoid
 
 使用sigmoid的kernal，並且令Penalty = 0.05，做出來的結果如下圖。預測的準確度僅有49.6%，也是屬於擲硬幣等級的準確度。
 ![](https://imgur.com/f9SeKQS.png)
 
 由於兩者的程式碼僅差在kernal = linear或kernal = sigmoid，因此僅附上一個檔案。
 
-### Discussion - SVM
+### #Discussion - SVM

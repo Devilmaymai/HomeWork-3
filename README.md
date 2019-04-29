@@ -80,7 +80,9 @@ Testing的結果如下。
 
 ### Feature selection + Ridge regression
 
-由前面的推測，選定Open price、High price及Low Price來進行Linear regression及Ridge regression。結果如下：
+由前面的推測，選定Open price、High price及Low Price來進行Linear regression及Ridge regression。
+
+Linear regression結果如下：
 
 ![](https://imgur.com/AQoakEj.png)
 

@@ -130,5 +130,16 @@ test結果也還是較差
 
 
 ## SVM
-資料處理沿用前面的部分，
+資料處理沿用前面的部分。處理完的資料則選用"Month"與"Open Price"對"Diff"做訓練。原因主要有以下兩點：
 
+1.根據下面的兩個scatter plot，可以看出前面討論的小循環可能是以年為單位，因此選用其下一級的單位"Month"來做training。
+![](https://imgur.com/eLIItPG.png)
+![](https://imgur.com/dIzKicn.png)
+
+2."High Price"(當日最高)、"Low Price"(當日最低)及"Volume"(成交量)，基本上為當日收盤結算時才能確定的資料，因此拿來預測漲跌(Diff)不太合理。
+所以這裡僅選擇開盤就能得知的"Open Price"來當作training用的第二種data。
+
+### SVM - linear
+
+使用linear的kernal，並且令Penalty = 0.05。所做出來的結果如下圖。可以看到預測的準確度僅有50.4%，基本上跟擲硬幣沒兩樣。
+![](https://imgur.com/4kkNrqQ.png)

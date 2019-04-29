@@ -50,3 +50,43 @@ Time:時間，以timestamp表示
 
 ## Regression
 
+### Linear regression
+
+將前面處理好的資料使用linear regression做training所得的結果如下。
+
+![](https://imgur.com/nO8h6zt.png)
+
+Testing的結果如下。
+
+![](https://imgur.com/uIO1OUy.png)
+
+將training所用到的data分別與Diff(漲跌幅)做散佈圖的結果如下，可以發現這幾個用來training的data與Diff(漲跌幅)似乎沒有太大的關連性。
+
+![](https://imgur.com/xymrpWz.png)
+
+### Ridge regression
+
+由下圖可知，最佳 𝛼=0。
+
+![](https://imgur.com/Vpxk7ws.png)
+
+接著進行ridge regression所得的結果如下。可以看出與原本的linear regression並無太大差異
+
+![](https://imgur.com/woFcwT5.png)
+
+而由coefficients推測，Open price、High price及Low Price似乎與漲跌幅(Diff)關聯性稍微好一點
+
+![](https://imgur.com/uSpEDAJ.png)
+
+### Feature selection + Ridge regression
+
+由前面的推測，選定Open price、High price及Low Price來進行Linear regression及Ridge regression。結果如下：
+
+![](https://imgur.com/AQoakEj.png)
+
+Ridge regression結果則如下：
+
+![](https://imgur.com/jgguBMf.png)
+
+綜合前述的結果，可以看出在經過Feature selection後的Linear regression及Ridge regression的MSE，都比沒有經過Feature selection的MSE差一些。
+

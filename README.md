@@ -143,3 +143,10 @@ test結果也還是較差
 
 使用linear的kernal，並且令Penalty = 0.05。所做出來的結果如下圖。可以看到預測的準確度僅有50.4%，基本上跟擲硬幣沒兩樣。
 ![](https://imgur.com/4kkNrqQ.png)
+
+### SVM - sigmoid
+
+使用sigmoid的kernal，並且令Penalty = 0.05，做出來的結果如下圖。預測的準確度僅有49.6%，也是屬於擲硬幣等級的準確度。
+![](https://imgur.com/f9SeKQS.png)
+
+由於兩者的程式碼僅差在kernal = linear或kernal = sigmoid，因此僅附上一個檔案。

@@ -152,3 +152,40 @@ test結果也還是較差
 由於兩者的程式碼僅差在kernal = linear或kernal = sigmoid，因此僅附上一個檔案。
 
 ### #Discussion - SVM
+
+無論是linear或是sigmoid，在training完後test的準確度都不理想，很有可能是拿來training的數據與漲跌幅(Diff)並無太大關聯導致。
+但在嘗試過其他的trainig set之後，得到的預測準確度都差不多，沒有值得放上來的結果。
+所以，推論應該是所下載下來的數據與漲跌幅(Diff)本身就沒有直接的關聯。
+
+## Neural network
+
+資料處理沿用前面的部分，不果這次會有兩種時間類型的資料，一個是時間為timestamp格式("Time")，另一個則是年月日季("Year","Month","Date","Q")的格式。
+
+兩種時間類型的資料則分別使用relu及sigmoid的hidden layer activation function各training及預測一次。
+
+### #Neural network - timestamp
+
+檔案：HW3_Neural_Network
+
+結果如下：
+
+#### -relu
+![](https://imgur.com/HCSCkcm.png)
+
+#### -sigmoid
+![](https://imgur.com/jxt1EhY.png)
+
+
+### #Neural network - Year, month, date, Q
+
+檔案：HW3_Neural_Network_Trail2
+
+結果如下：
+
+#### -relu
+![](https://imgur.com/SlUF86L.png)
+
+#### -sigmoid
+![](https://imgur.com/Raw7TOQ.png)
+
+### #Discussion - Neural network

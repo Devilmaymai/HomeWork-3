@@ -167,6 +167,7 @@ test結果也還是較差
 
 檔案：HW3_Neural_Network
 
+使用的參數如下：
 ![](https://imgur.com/i7NCmfz.png)
 ![](https://imgur.com/72wZSeq.png)
 

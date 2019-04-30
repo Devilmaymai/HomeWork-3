@@ -103,27 +103,27 @@ Ridge regression結果則如下：
 轉換程式碼：
 ![](https://imgur.com/VXnX8zA.png)
 
-#### -Linear regression
+#### ->Linear regression
 
 training的結果較前面的好，但是套用到testing set時結果就比前面的結果差。
 ![](https://imgur.com/a2Xcyx0.png)
 
-#### -Ridge regression
+#### ->Ridge regression
 
 test結果還是較差
 ![](https://imgur.com/bn8Ert7.png)
 
-#### -Feature selection ("Open Price", "High Price", "Low Price", "Q")
+#### ->Feature selection ("Open Price", "High Price", "Low Price", "Q")
 
 test結果也是較差
 ![](https://imgur.com/f8yh94I.png)
 
-#### -Feature selection + ridge regression
+#### ->Feature selection + ridge regression
 
 test結果也還是較差
 ![](https://imgur.com/hY4WcH7.png)
 
-#### -Summary
+#### ->Summary
 
 到這邊，已經嘗試了我覺得可能可以改進的方法。但結果並不如預期，不過這些其實由scatter plot就可以看出端倪。
 除非有更關鍵的資料或是額外的公式引入，不然應該是無法改進這個結果了。
@@ -167,25 +167,42 @@ test結果也還是較差
 
 檔案：HW3_Neural_Network
 
+![](https://imgur.com/i7NCmfz.png)
+![](https://imgur.com/72wZSeq.png)
+
 結果如下：
 
-#### -relu
-![](https://imgur.com/HCSCkcm.png)
+#### ->relu
+![](https://imgur.com/L1X3G7D.png)
 
-#### -sigmoid
-![](https://imgur.com/jxt1EhY.png)
+#### ->sigmoid
+![](https://imgur.com/DesYjCp.png)
 
 
 ### #Neural network - Year, month, date, Q
 
 檔案：HW3_Neural_Network_Trail2
 
+參數的setup基本上跟前面一樣
+
 結果如下：
 
-#### -relu
-![](https://imgur.com/SlUF86L.png)
+#### ->relu
 
-#### -sigmoid
-![](https://imgur.com/Raw7TOQ.png)
+![](https://imgur.com/UdjGZuV.png)
+
+#### ->sigmoid
+
+![](https://imgur.com/8Qm5lnB.png)
 
 ### #Discussion - Neural network
+
+由前面的四個結果，可以看到預測準確度幾乎都在50%附近。兩種時間資料並沒有造成太大的差別。
+很油可能漲跌幅並無罰有這樣的資料預測出來
+
+## 總結
+
+比較了三個方式，其實並沒有看出哪種calssifiers能夠提供較好的預測。
+這很大概就是garbage in, grabage out的概念，使用了不太有關聯的數據，就無法得到有意義結果。
+不過也可能是因為我對於資料分析的資歷尚淺，所以無法有效利用手邊的數據與工具所導致。
+
